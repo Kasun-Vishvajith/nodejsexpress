@@ -1,7 +1,13 @@
 const config = require('./config');
 const express = require('express');
 const path = require('path');
+<<<<<<< New base: fix: resolve TypeError for express-handlebars v6 API change
 const { engine } = require('express-handlebars');
+||||||| Common ancestor
+const exphbs = require('express-handlebars');
+=======
+const { engine } = require('express-handlebars'); //Mod
+>>>>>>> Current commit: fix: resolve TypeError for express-handlebars v6 API change
 
 const index = require('./routes/index');
 const who = require('./routes/who');
@@ -10,7 +16,13 @@ const contact = require('./routes/contact');
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
+<<<<<<< New base: fix: resolve TypeError for express-handlebars v6 API change
 app.engine('handlebars', engine({ defaultLayout: 'main' }));
+||||||| Common ancestor
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+=======
+app.engine('handlebars', engine({ defaultLayout: 'main' })); //Mod
+>>>>>>> Current commit: fix: resolve TypeError for express-handlebars v6 API change
 app.set('view engine', 'handlebars');
 app.set('port', config.port);
 
