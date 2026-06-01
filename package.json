@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npm install",
     "test": "mocha --exit",
-    "start": "node app.js"
+    "start": "node app.js",
+    "deploy-static": "mkdir -p dist && echo '<h1>Node.js Express App - CI/CD Pipeline</h1><p>This is your staging environment deployed via GitHub Pages.</p><ul><li><a href=\"/nodejsexpress/assets/\">View Assets</a></li></ul>' > dist/index.html && cp -r public/* dist/ 2>/dev/null || true"
   },
   "author": "",
   "license": "ISC",
