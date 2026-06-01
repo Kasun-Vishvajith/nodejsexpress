@@ -7,6 +7,7 @@ const index = require('./routes/index');
 const who = require('./routes/who');
 const contact = require('./routes/contact');
 const services = require('./routes/services');
+const about = require('./routes/about');
 
 const app = express();
 
@@ -30,6 +31,7 @@ app.use('/', index);
 app.use('/who', who);
 app.use('/contact', contact);
 app.use('/services', services);
+app.use('/about', about);
 
 app.listen(config.port, () => {
   console.log(`Demo app is running on ${config.port}!`);
