@@ -1,7 +1,7 @@
 const config = require('./config');
 const express = require('express');
 const path = require('path');
-const exphbs = require('express-handlebars');
+const exphbs = require('express-handlebars').engine;
 
 const index = require('./routes/index');
 const who = require('./routes/who');
