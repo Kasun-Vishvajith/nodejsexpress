@@ -19,6 +19,13 @@ app.use('/', express.static('public'));
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'Pipeline is operational' });
 });
+app.get('/api/info', (req, res) => {
+  res.status(200).json({
+    name: 'node-express-azure',
+    version: '1.0.0',
+    description: 'Demo app for Azure Pipelines and CI/CD'
+  });
+});
 app.use('/', index);
 app.use('/who', who);
 app.use('/contact', contact);
